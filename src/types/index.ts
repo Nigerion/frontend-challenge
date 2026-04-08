@@ -1,0 +1,8 @@
+export interface getListCats {
+  id: string;
+  url: string;
+  width: number;
+  height: number;
+  //   breeds: [];
+  //   favourite: {};
+}

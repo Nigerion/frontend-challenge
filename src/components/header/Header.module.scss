@@ -1,0 +1,29 @@
+.tabs {
+  display: flex;
+  background-color: rgb(33, 150, 243);
+  padding: 0 62px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 23px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    background: rgb(47, 143, 227);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &.active {
+    background: rgb(30, 136, 229);
+    color: rgba(255, 255, 255, 1);
+  }
+}

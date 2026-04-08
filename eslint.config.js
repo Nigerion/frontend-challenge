@@ -39,6 +39,7 @@ export default [
       sourceType: "module",
       // Добавляет глобальные переменные браузера
       globals: {
+        ...globals.node,
         ...globals.browser,
         ...globals.es2021
       }
@@ -71,7 +72,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
 
       // Если код нарушает стиль — ESLint покажет ошибку.
-      "prettier/prettier": "error",
+      "prettier/prettier": ["error", { "endOfLine": "auto" }],
 
       // Импорты сортируются сами
       "simple-import-sort/imports": "error",

@@ -1,8 +1,13 @@
+import { Provider } from "react-redux";
+import { Outlet } from "react-router-dom";
+
+import { store } from "./service/store";
+
 function App() {
   return (
-    <>
-      <div>as</div>
-    </>
+    <Provider store={store}>
+      <Outlet />
+    </Provider>
   );
 }
 
