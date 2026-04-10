@@ -38,7 +38,7 @@ export const catsApi = createApi({
     getCats: build.infiniteQuery<getListCats[], void, number>({
       infiniteQueryOptions: {
         initialPageParam: 0,
-        getNextPageParam: (lastPage, allPages, lastPageParam) => {
+        getNextPageParam: (lastPage, _, lastPageParam) => {
           if (lastPage.length === 0) return undefined;
           return lastPageParam + 1;
         },
